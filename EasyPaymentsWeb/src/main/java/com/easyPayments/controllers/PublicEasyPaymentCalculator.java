@@ -15,12 +15,10 @@ import com.easyPayments.services.EasyCalculateService;
 public class PublicEasyPaymentCalculator {
 
 	@Autowired
-	private EasyCalculateService  calcService;
+	EasyCalculateService  calcService;
 	@RequestMapping(value = "/calculate", method=RequestMethod.POST)
 	public PaymentCalculatorOutput prepareUserExpenses(@RequestBody PaymentCalculatorInput input){
-		//TODO call calculate service;
-		
-		PaymentCalculatorOutput output = new PaymentCalculatorOutput(null);
+		PaymentCalculatorOutput output = new PaymentCalculatorOutput(calcService.retrieveCalculatedPayments(input));
 		return output;
 	}
 }

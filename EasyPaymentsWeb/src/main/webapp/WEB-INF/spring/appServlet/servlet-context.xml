@@ -9,6 +9,11 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 	
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/resources/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
 <!-- 	Enable @Transactional annotation -->
 	<tx:annotation-driven/>
 
@@ -19,8 +24,10 @@
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	
 <!-- 	Find spring beans -->
-	<context:component-scan base-package="com.easyPayments"/>
-	
+	<context:component-scan base-package="com.easyPayments.controllers"/>
+	<context:component-scan base-package="com.easyPayments.services"/>
+	<context:component-scan base-package="com.easyPayments.components"/>
+	<context:component-scan base-package="com.easyPayments.TransferObjects"/>
 	
 <!-- 	Spring ORM -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">

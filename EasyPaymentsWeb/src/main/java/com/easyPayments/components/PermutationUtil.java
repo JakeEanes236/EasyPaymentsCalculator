@@ -1,10 +1,13 @@
-package com.ex;
+package com.easyPayments.components;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PermUtil<E> {
-	
+import org.springframework.stereotype.Component;
+
+@Component
+public class PermutationUtil<E> {
+
 	 public List<List<E>> generatePerm(List<E> original) {
 	     if (original.size() == 0) { 
 	       List<List<E>> result = new ArrayList<List<E>>();

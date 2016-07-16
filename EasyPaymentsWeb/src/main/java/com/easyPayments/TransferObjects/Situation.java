@@ -1,11 +1,14 @@
-package com.ex;
+package com.easyPayments.TransferObjects;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Situation implements Comparable<Situation> {
 	
-	List<Payment> payments = new ArrayList<>();
+	private List<Payment> payments = new ArrayList<>();
 	
 	public Situation(){}
 
