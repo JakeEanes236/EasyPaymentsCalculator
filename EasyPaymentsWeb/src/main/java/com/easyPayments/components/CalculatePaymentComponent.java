@@ -24,7 +24,7 @@ public class CalculatePaymentComponent {
 		}
 		System.out.println("\n");
 		for(Payment temp : bestSituation.getPayments()){
-			System.out.println(temp.getFrom().getName() + "Pays $" + temp.getAmount() +"  to\t" + temp.getTo().getName() + "\t");
+			System.out.println(temp.getFrom().getName() + " Pays $" + temp.getAmount() +"  to\t" + temp.getTo().getName() + "\t");
 		}
 		return bestSituation;
 	}

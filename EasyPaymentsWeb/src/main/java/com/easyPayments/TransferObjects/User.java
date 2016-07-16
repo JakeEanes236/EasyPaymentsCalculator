@@ -3,9 +3,6 @@ package com.easyPayments.TransferObjects;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class User {
 	
 	private String name;

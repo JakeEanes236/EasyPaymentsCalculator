@@ -2,9 +2,6 @@ package com.easyPayments.TransferObjects;
 
 import java.util.List;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class PaymentCalculatorInput {
 
 	List<User> users;

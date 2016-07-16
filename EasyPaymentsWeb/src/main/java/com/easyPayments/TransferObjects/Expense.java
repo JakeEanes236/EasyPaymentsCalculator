@@ -1,8 +1,5 @@
 package com.easyPayments.TransferObjects;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Expense {
 
 	double amount;
