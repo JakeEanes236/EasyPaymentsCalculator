@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="EPApp">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Dope App</title>
+  
+  
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- ngMaterial -->
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.css"> -->
+  
+  <!-- Font Awesome -->
+<!--   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/> -->
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="resources/css/epstyle.css"/>
+  
 </head>
 <body>
+  
+  <div>
+    <button data-ui-sref="HomeState" class="btn btn-primary">Home <span class="glyphicon glyphicon-home"></span></button>
+    <button data-ui-sref="CalculatorState" class="btn btn-primary">Calculator <span class="glyphicon glyphicon-plus"></span></button>
+  </div>
 
-</body>
+
+
+  <div class="container">
+    <data-ui-view></data-ui-view>
+  </div>
+
+
+  <!-- AngularJS Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+<!--   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.js"></script> -->
+
+<!--   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script> -->
+<!--   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script> -->
+  
+  <!-- UI Libraries -->  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap-tpls.min.js"></script>
+
+  <!-- Custom Scripts -->  
+  <script type="text/javascript" src="resources/ng/app.js"></script>
+
 </html>
