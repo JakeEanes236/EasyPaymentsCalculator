@@ -106,19 +106,16 @@ public class CalculatePaymentComponent {
 						whoOwes.setAmountIOwe(whoOwes.getAmountIOwe() - owedAmount);
 						owed.setAmountImOwed(0);
 						situation.getPayments().add(new Payment(whoOwes, owed, owedAmount));
-						//payout outer person
 						continue outer;
 					}else if(owedAmount > whoOwesAmount){
 						whoOwes.setAmountIOwe(0);
 						owed.setAmountImOwed(owed.getAmountImOwed() - whoOwesAmount);
 						situation.getPayments().add(new Payment(whoOwes, owed, whoOwesAmount));
-						//payout outer person
 						continue;
 					}else {
 						whoOwes.setAmountIOwe(0);
 						owed.setAmountImOwed(0);
 						situation.getPayments().add(new Payment(whoOwes, owed, owedAmount));
-						//payout outer person
 						continue outer;
 					}
 				}
