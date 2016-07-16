@@ -12,7 +12,7 @@ import com.easyPayments.TransferObjects.PaymentCalculatorInput;
 import com.easyPayments.TransferObjects.Situation;
 import com.easyPayments.components.CalculatePaymentComponent;
 
-@Transactional
+//@Transactional
 @Service
 public class EasyCalculateService {
 
