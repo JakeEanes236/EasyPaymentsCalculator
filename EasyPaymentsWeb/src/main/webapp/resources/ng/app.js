@@ -48,6 +48,10 @@ angular.module("EPApp")
 		calculatorData.users.unshift(newUser);
 	}
 	
+	calculatorData.removeUser = function(userToRemove){
+		calculatorData.users.splice(calculatorData.users.indexOf(userToRemove), 1);
+	}
+	
 	calculatorData.addUserExpense = function(user, newExpenseName, newExpenseAmount){
 		
 		var newExpense = {
@@ -59,7 +63,15 @@ angular.module("EPApp")
 		
 	}
 	
+	calculatorData.removeUserExpense = function(user, expenseToRemove){
+		user.myExpenses.splice(user.myExpenses.indexOf(expenseToRemove), 1);
+	}
+	
 	calculatorData.calculate = function(){
+		
+		calculatorData.result = null;
+		calculatorData.showResults = true;
+		calculatorData.hideConfig = true;
 		
 		var input = {
 			users : calculatorData.users
@@ -69,7 +81,7 @@ angular.module("EPApp")
 		
 		promise.then(function(response){
 			//success
-			console.log(response);
+			calculatorData.result = response.data;
 		}, function(response){
 			//error
 		});
