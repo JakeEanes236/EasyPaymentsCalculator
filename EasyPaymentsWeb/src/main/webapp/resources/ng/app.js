@@ -29,6 +29,14 @@ angular.module("EPApp")
 });
 
 angular.module("EPApp")
+.controller("SidebarCtrl", function($state){
+	var sidebarData = this;
+	
+	sidebarData.$state = $state;
+	
+});
+
+angular.module("EPApp")
 .controller("HomeCtrl", function(){
 	
 });
@@ -37,7 +45,8 @@ angular.module("EPApp")
 .controller("CalculatorCtrl", function(EPService){
 	var calculatorData = this;
 	
-	calculatorData.users = EPService.testInput.users;
+//	calculatorData.users = EPService.testInput.users;
+	calculatorData.users = [];
 	
 	calculatorData.addUser = function(newUserName){
 		var newUser = {
@@ -106,6 +115,7 @@ angular.module("EPApp")
 	  });
   }
   
+  /*
   epserviceData.testInput = {
 	    "users" : [
 	            
@@ -163,4 +173,5 @@ angular.module("EPApp")
 	        
 	        ]
 	};
+	*/
 });

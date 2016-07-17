@@ -1,19 +1,112 @@
 @CHARSET "UTF-8";
 
-/* .sidebar { */
-/*     position: fixed; */
-/*     left: 0; */
-/*     top: 0; */
-/*     bottom: 0; */
-/*     padding: 10px; */
-/*     width: 250px; */
-/*     background-color: white; */
-/*     overflow-y: scroll; */
-/* } */
+#wrapper {
+  padding-left: 150px;
+  transition: all 0.4s ease 0s;
+}
 
-/* .template-content { */
-/* 	left : 250px; */
-/* } */
+#sidebar-wrapper {
+  margin-left: -150px;
+  left: 150px;
+  width: 150px;
+  background-color: #222;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper a {
+	color:#fff;
+}
+
+#sidebar-wrapper a:HOVER {
+	text-decoration: none;
+}
+
+#sidebar-wrapper li {
+	height: 40px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#sidebar-wrapper li:HOVER {
+	background-color: #333;
+}
+
+#sidebar-wrapper li:HOVER a {
+	color: #80ff00;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 150px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:767px) {
+
+    #wrapper {
+      padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+      left: 0;
+    }
+
+    #wrapper.active {
+      position: relative;
+      left: 150px;
+    }
+
+    #wrapper.active #sidebar-wrapper {
+      left: 150px;
+      width: 150px;
+      transition: all 0.4s ease 0s;
+    }
+
+}
+
+
+/* 
+ * Override container widths b/c there is a sidebar for these sizes
+ * 		Sidebar width : 150px;
+ */
+@media (min-width: 768px){
+	.container {
+/* 	    width: 750px; */
+		width: 600px;
+	}
+}
+
+@media (min-width: 992px){
+	.container {
+/* 	    width: 970px; */
+		width:820px;
+	}
+}
+
+@media (min-width: 1200px){
+	.container {
+	/*  width: 1170px; */
+	    width: 1020px;
+	}
+}
+/*
+  *******************************************************
+*/
+
+.clickable {
+	cursor: pointer;
+}
 
 .centered {
 	text-align: center;
