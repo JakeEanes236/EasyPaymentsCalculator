@@ -75,6 +75,9 @@ public class CalculatePaymentComponent {
 			if(temp.isiOweMoney()){
 				roommatesWhoOwe.add(temp);
 			}else {
+				if(temp.getOwedToRoommates() == 0){
+					continue;
+				}
 				roommatesWhoAreOwed.add(temp);
 			}
 		}
